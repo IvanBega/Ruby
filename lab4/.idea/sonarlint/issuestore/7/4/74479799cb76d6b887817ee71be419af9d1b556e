@@ -1,0 +1,13 @@
+
+Ž	ruby:S100"mRename function "getMatrix" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(Ô²Ï¼øÿÿÿÿ8™ÂßÍ²0
+‰	ruby:S100"mRename function "getVector" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(øÖš²8™ÂßÍ²0
+‹	ruby:S100"oRename function "printVector" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(Œñ®¢8™ÂßÍ²0
+	ruby:S100'"oRename function "printMatrix" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(ÎªÒôúÿÿÿÿ8™ÂßÍ²0
+	ruby:S100/"sRename function "solveTriangular" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(Ö ë—8šÂßÍ²0
+Š	ruby:S100A"nRename function "solveGauss" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(¡¼«Á8šÂßÍ²0
+‹	ruby:S117F"oRename this local variable to match the regular expression "^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$".(Àô«8šÂßÍ²0
+L
+ruby:S1656K"/Remove or correct this useless self-assignment.(½ü¤º8šÂßÍ²0
+	ruby:S117P"oRename this local variable to match the regular expression "^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$".(—–ØÑúÿÿÿÿ8›ÂßÍ²0
+Q
+ruby:S1656W"/Remove or correct this useless self-assignment.(™œæ©þÿÿÿÿ8Ç÷àÍ²0

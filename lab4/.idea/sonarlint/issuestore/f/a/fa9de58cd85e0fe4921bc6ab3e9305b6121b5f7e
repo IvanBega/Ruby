@@ -1,0 +1,4 @@
+
+	ruby:S100"mRename function "getMatrix" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(ךÙתטרÿÿÿÿ8¯·ֹֽ²0
+	ruby:S100"oRename function "printMatrix" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(־×ׂפתÿÿÿÿ8°·ֹֽ²0
+	ruby:S100#"oRename function "addMatrices" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(«״‹°תÿÿÿÿ8°·ֹֽ²0
