@@ -1,25 +1,18 @@
-def A()
-  sum = 0
-  (0..9).each {|i| sum += 1.0 / (3 ** i)}
-  return sum
-end
+class Task3
+  def A()
+    sum = 0
+    (0..9).each {|i| sum += 1.0 / (3 ** i)}
+    return sum
+  end
+  def B(x, n)
+    sum = 0
+    fact = 1
+    (0..n + 1).each {
+      |i|
+      sum += (x.to_f ** i) / fact
+      fact *= (i + 1)
+    }
 
-def B(x, n)
-  sum = 0
-  fact = 1
-  (0..n + 1).each {
-    |i|
-    sum += (x.to_f ** i) / fact
-    fact *= (i + 1)
-  }
-
-  return sum
+    return sum
+  end
 end
-sum1 = A()
-puts "Sum for 1 + 1/3 + ... + 1/(3^8) = #{sum1}"
-puts "Enter n: "
-n = gets.chomp.to_i
-puts "Enter x: "
-x = gets.chomp.to_i
-sum2 = B(x, n)
-puts "Sum 1 + x^1/1! + ... + x^n/n! = #{sum2}"
