@@ -1,96 +1,99 @@
-
-def getMatrix(n, k)
-  m = Array.new(n)
-  n.times {
-    |idx|
-    m[idx] = Array.new(n, (k + 2).to_f);
-  }
-  m.each_with_index {
-    |row, rIdx|
-    row.each_with_index {
-      |el, cIdx|
-      m[rIdx][cIdx] = 2.to_f if rIdx == cIdx
+class Task3
+  def getMatrix(n, k)
+    m = Array.new(n)
+    n.times {
+      |idx|
+      m[idx] = Array.new(n, (k + 2).to_f);
     }
-  }
-  return m
-end
-
-def getVector(n)
-  vec = []
-  n.times {
-    |idx|
-    vec.push((idx + 1).to_f)
-  }
-  return vec
-end
-
-def printVector(vec, vertical = false)
-  vec.each {
-    |el|
-    if (vertical)
-      puts "#{el} "
-    else
-      print "#{el} "
-    end
-  }
-  print "\n"
-end
-
-def printMatrix(matrix)
-  matrix.each {
-    |row|
-    printVector(row)
-  }
-  print "\n"
-end
-
-def solveTriangular(a, b)
-  x = Array.new(b.length)
-
-  (a.length - 1).downto(0) {
-    |rIdx|
-    acc_sum = 0
-
-    (a.length - 1).downto(rIdx + 1) {
-      |cIdx|
-      acc_sum += x[cIdx] * a[rIdx][cIdx]
-    }
-
-    x[rIdx] = b[rIdx] - acc_sum
-  }
-
-  return x
-end
-
-def solveGauss(a, b)
-  n = a.length
-  n.times {
-    |rIdx|
-
-    divCoef = a[rIdx][rIdx]
-    a[rIdx].map! {
-      |el|
-      el /= divCoef
-    }
-    a[rIdx] = a[rIdx] #
-    b[rIdx] /= divCoef
-
-    (rIdx + 1).upto(n - 1) {
-      |updRIdx|
-      subtrCoef = a[updRIdx][rIdx]
-      b[updRIdx] -= subtrCoef * b[rIdx]
-
-      (rIdx).upto(n - 1) {
-        |updElIdx|
-        a[updRIdx][updElIdx] -= subtrCoef * a[rIdx][updElIdx]
+    m.each_with_index {
+      |row, rIdx|
+      row.each_with_index {
+        |el, cIdx|
+        m[rIdx][cIdx] = 2.to_f if rIdx == cIdx
       }
-      a[updRIdx] = a[updRIdx]
     }
-  }
+    return m
+  end
+  def getVector(n)
+    vec = []
+    n.times {
+      |idx|
+      vec.push((idx + 1).to_f)
+    }
+    return vec
+  end
 
-  return solveTriangular(a, b)
+  def printVector(vec, vertical = false)
+    vec.each {
+      |el|
+      if (vertical)
+        puts "#{el} "
+      else
+        print "#{el} "
+      end
+    }
+    print "\n"
+  end
+
+  def printMatrix(matrix)
+    matrix.each {
+      |row|
+      printVector(row)
+    }
+    print "\n"
+  end
+
+  def solveTriangular(a, b)
+    x = Array.new(b.length)
+
+    (a.length - 1).downto(0) {
+      |rIdx|
+      acc_sum = 0
+
+      (a.length - 1).downto(rIdx + 1) {
+        |cIdx|
+        acc_sum += x[cIdx] * a[rIdx][cIdx]
+      }
+
+      x[rIdx] = b[rIdx] - acc_sum
+    }
+
+    return x
+  end
+
+  def solveGauss(a, b)
+    n = a.length
+    n.times {
+      |rIdx|
+
+      divCoef = a[rIdx][rIdx]
+      a[rIdx].map! {
+        |el|
+        el /= divCoef
+      }
+      a[rIdx] = a[rIdx] #
+      b[rIdx] /= divCoef
+
+      (rIdx + 1).upto(n - 1) {
+        |updRIdx|
+        subtrCoef = a[updRIdx][rIdx]
+        b[updRIdx] -= subtrCoef * b[rIdx]
+
+        (rIdx).upto(n - 1) {
+          |updElIdx|
+          a[updRIdx][updElIdx] -= subtrCoef * a[rIdx][updElIdx]
+        }
+        a[updRIdx] = a[updRIdx]
+      }
+    }
+
+    return solveTriangular(a, b)
+  end
 end
 
+
+
+=begin
 #Entering n and k from keyboard
 n = 0
 k = 0
@@ -104,13 +107,14 @@ k = gets.chomp.to_i
 puts ""
 
 
-a = getMatrix(n, k)
-b = getVector(n)
+a = Task3.new.getMatrix(n, k)
+b = Task3.new.getVector(n)
 puts "Matrix A is"
-printMatrix(a)
+Task3.new.printMatrix(a)
 
 puts "Vector b is"
-printVector(b, true)
+Task3.new.printVector(b, true)
 
 puts "Solution is"
-printVector(solveGauss(a, b), true)
+Task3.new.printVector(Task3.new.solveGauss(a, b), true)
+=end
