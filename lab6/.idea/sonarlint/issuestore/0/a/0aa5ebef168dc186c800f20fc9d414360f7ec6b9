@@ -1,0 +1,8 @@
+
+ƒ	ruby:S100"nRename function "addStudent" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(δδΎ‹
+†	ruby:S100"qRename function "printStudents" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(ή«η
+	ruby:S100"tRename function "requireDormCount" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(Ψ¤–λϊÿÿÿÿ
+	ruby:S100"ƒRename function "printTeachersWithTwoOrMoreYears" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(®Δ’ύÿÿÿÿ
+	ruby:S100!"tRename function "printFinishedPTU" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(σφε‰ÿÿÿÿÿ
+	ruby:S100,"wRename function "printLanguageGroups" to match the regular expression ^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$(αΌΊΑ
+„	ruby:S117-"oRename this local variable to match the regular expression "^(@{0,2}[\da-z_]+[!?=]?)|([*+-/%=!><~]+)|(\[]=?)$".(ΈΕυν
